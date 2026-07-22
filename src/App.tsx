@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
+import { ProofStrip } from './components/ProofStrip';
+import { RoxouEcosystemSection } from './components/RoxouEcosystemSection';
 import { Ecosystem } from './components/Ecosystem';
+import { HowWeBuild } from './components/HowWeBuild';
+import { About } from './components/About';
 import { Areas } from './components/Areas';
 import { Philosophy } from './components/Philosophy';
 import { Contact } from './components/Contact';
@@ -88,7 +91,7 @@ export default function App() {
   const isAiPage = currentPath === '/desenvolvimento-com-inteligencia-artificial';
 
   return (
-    <div className="min-h-screen bg-[#07090e] text-zinc-100 flex flex-col font-sans selection:bg-purple-500/20 selection:text-purple-200">
+    <div className="min-h-screen bg-[#050505] text-zinc-100 flex flex-col font-sans selection:bg-purple-500/20 selection:text-purple-200">
       {/* Header */}
       <Header 
         onNavigate={handleNavigateSection} 
@@ -109,7 +112,10 @@ export default function App() {
         ) : (
           <>
             <Hero onNavigate={handleNavigateSection} />
-            <Ecosystem />
+            <ProofStrip />
+            <RoxouEcosystemSection />
+            <Ecosystem onNavigateRoute={handleNavigateRoute} />
+            <HowWeBuild />
             <About />
             <Areas onNavigateRoute={handleNavigateRoute} />
             <Philosophy />

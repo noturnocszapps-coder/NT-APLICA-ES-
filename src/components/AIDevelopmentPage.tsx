@@ -224,7 +224,7 @@ export const AIDevelopmentPage: React.FC<AIDevelopmentPageProps> = ({ onNavigate
   ];
 
   return (
-    <article className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#07090e] text-zinc-100">
+    <article className="pt-28 pb-16 sm:pt-36 sm:pb-24 bg-[#050505] text-zinc-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24 sm:space-y-32">
 
         {/* Back Link Breadcrumb */}

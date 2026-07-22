@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onNavigateRoute, onO
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#05070a] border-t border-zinc-800/80 text-zinc-400 py-12 sm:py-16">
+    <footer className="bg-[#050505] border-t border-zinc-800/80 text-zinc-400 py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-12 pb-10 border-b border-zinc-800/60">

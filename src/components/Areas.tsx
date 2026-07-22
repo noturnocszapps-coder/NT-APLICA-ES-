@@ -48,7 +48,7 @@ export const Areas: React.FC<AreasProps> = ({ onNavigateRoute }) => {
   ];
 
   return (
-    <section id="areas" className="py-24 sm:py-32 relative bg-[#07090e] border-t border-zinc-800/80">
+    <section id="areas" className="py-24 sm:py-32 relative bg-[#050505] border-t border-zinc-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -66,10 +66,10 @@ export const Areas: React.FC<AreasProps> = ({ onNavigateRoute }) => {
           {areasList.map((item) => (
             <div 
               key={item.number}
-              className="py-6 sm:py-8 group hover:bg-zinc-900/30 transition-colors px-2 sm:px-4 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-4"
+              className="py-6 sm:py-8 group hover:bg-zinc-900/40 transition-colors px-3 sm:px-6 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4"
             >
               <div className="flex items-baseline gap-4 sm:gap-6">
-                <span className="text-sm font-mono text-zinc-400 shrink-0">
+                <span className="text-sm font-mono text-purple-400 font-bold shrink-0">
                   {item.number}
                 </span>
                 <span className="text-xl sm:text-2xl font-bold font-heading text-white group-hover:text-purple-300 transition-colors">
@@ -89,10 +89,10 @@ export const Areas: React.FC<AreasProps> = ({ onNavigateRoute }) => {
                           onNavigateRoute('/desenvolvimento-com-inteligencia-artificial');
                         }
                       }}
-                      className="text-xs font-mono text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-1 cursor-pointer"
+                      className="text-xs font-mono text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-1 cursor-pointer font-medium"
                     >
                       <span>Desenvolvimento com Inteligência Artificial</span>
-                      <ArrowUpRight className="w-3 h-3" />
+                      <ArrowUpRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 )}

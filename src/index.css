@@ -7,40 +7,62 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: var(--font-sans);
-    background-color: #07090e;
-    color: #f1f5f9;
+    background-color: #050505;
+    color: #f4f4f5;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 }
 
-/* Subtle Editorial Styles for NT Aplicações */
-.border-subtle {
+/* Premium Product Studio Surfaces & Utilities */
+.bg-studio-black {
+  background-color: #050505;
+}
+
+.bg-studio-surface-1 {
+  background-color: #09090b;
+}
+
+.bg-studio-surface-2 {
+  background-color: #111114;
+}
+
+.bg-studio-surface-3 {
+  background-color: #18181b;
+}
+
+.border-studio-subtle {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-.bg-card-dark {
-  background-color: #0d1017;
+.border-studio-hover:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
-.bg-card-darker {
-  background-color: #0a0c12;
-}
-
-/* Subtle Hover State */
-.editorial-hover {
-  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
-}
-
-.editorial-hover:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-  background-color: #111520;
+/* Micro-interactions & animations */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Custom scrollbar */
@@ -48,13 +70,14 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #07090e;
+  background: #050505;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #27272a;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #3f3f46;
 }
+
 
