@@ -1,0 +1,6 @@
+{
+  "name": "NT Aplicações",
+  "description": "A NT Aplicações cria plataformas, sistemas SaaS e produtos digitais para negócios, entretenimento, mobilidade, cidades e gestão.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
