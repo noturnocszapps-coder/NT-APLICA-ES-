@@ -81,10 +81,11 @@ export const Contact: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {/* Nome */}
                 <div>
-                  <label className="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">
+                  <label htmlFor="contact-name" className="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">
                     Nome *
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     name="name"
                     required
@@ -97,10 +98,11 @@ export const Contact: React.FC = () => {
 
                 {/* E-mail ou WhatsApp */}
                 <div>
-                  <label className="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">
+                  <label htmlFor="contact-info" className="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">
                     E-mail ou WhatsApp *
                   </label>
                   <input
+                    id="contact-info"
                     type="text"
                     name="contactInfo"
                     required
@@ -114,10 +116,11 @@ export const Contact: React.FC = () => {
 
               {/* Mensagem */}
               <div>
-                <label className="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">
+                <label htmlFor="contact-message" className="block text-xs font-mono text-zinc-400 mb-1.5 uppercase">
                   Mensagem *
                 </label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   rows={4}
                   required

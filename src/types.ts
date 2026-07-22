@@ -5,7 +5,8 @@ export type ProductCategory =
   | 'Mobilidade'
   | 'Inteligência empresarial'
   | 'Informação e cidades'
-  | 'Experiências e produção';
+  | 'Experiências e produção'
+  | string;
 
 export interface Product {
   id: string;

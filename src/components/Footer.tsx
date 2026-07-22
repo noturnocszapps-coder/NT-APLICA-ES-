@@ -25,11 +25,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy }) => 
           </div>
 
           {/* Product Links */}
-          <div className="md:col-span-3 space-y-2.5">
+          <div className="md:col-span-4 space-y-2.5">
             <div className="text-xs font-mono uppercase tracking-wider text-white">
-              Produtos
+              Produtos & Ecossistema
             </div>
-            <ul className="space-y-1.5 text-xs">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
               <li>
                 <a 
                   href="https://roxou.com.br" 
@@ -52,6 +52,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy }) => 
               </li>
               <li>
                 <a 
+                  href="https://transporte.roxou.com.br" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors text-zinc-300"
+                >
+                  Roxou Transporte
+                </a>
+              </li>
+              <li>
+                <a 
                   href="https://contabil.ntaplicacoes.com.br" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -60,11 +70,31 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy }) => 
                   Split Ready AI
                 </a>
               </li>
+              <li>
+                <a 
+                  href="https://prudenteemfoco.com.br/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors text-zinc-300"
+                >
+                  Prudente em Foco
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.melhoraprudente.com.br" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors text-zinc-300"
+                >
+                  Melhora Prudente
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Institutional Links */}
-          <div className="md:col-span-4 space-y-2.5">
+          <div className="md:col-span-3 space-y-2.5">
             <div className="text-xs font-mono uppercase tracking-wider text-white">
               Institucional
             </div>

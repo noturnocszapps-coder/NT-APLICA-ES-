@@ -4,14 +4,10 @@ import {
   MapPin, 
   QrCode, 
   CheckCircle2, 
-  TrendingUp, 
   Car, 
-  ShieldAlert, 
   Newspaper, 
   Calendar, 
   Users, 
-  DollarSign, 
-  Activity,
   ArrowUpRight,
   Zap
 } from 'lucide-react';
@@ -126,6 +122,7 @@ export const ProductMockup: React.FC<ProductMockupProps> = ({ productId }) => {
         </div>
       );
 
+    case 'roxou-transporte':
     case 'roxou-motorista':
       return (
         <div className="relative w-full h-48 bg-[#0d0f14] rounded-xl overflow-hidden border border-amber-500/20 p-3 font-sans select-none group-hover:border-amber-500/40 transition-colors">
@@ -135,7 +132,7 @@ export const ProductMockup: React.FC<ProductMockupProps> = ({ productId }) => {
           <div className="flex items-center justify-between pb-2 border-b border-slate-800">
             <div className="flex items-center gap-1.5">
               <Car className="w-3.5 h-3.5 text-amber-400" />
-              <span className="text-[11px] font-bold text-slate-200">Roxou Motorista</span>
+              <span className="text-[11px] font-bold text-slate-200">Roxou Transporte</span>
             </div>
             <span className="text-[10px] bg-amber-500/10 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded-full">
               Meta Diária

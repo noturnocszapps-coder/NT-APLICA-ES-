@@ -4,11 +4,11 @@ export const PRODUCTS_DATA: Product[] = [
   {
     id: 'roxou',
     name: 'Roxou',
-    category: 'Descoberta e entretenimento',
+    category: 'Ecossistema Roxou — Entretenimento',
     description: 'Uma plataforma de descoberta local para encontrar eventos, experiências, gastronomia, entretenimento e tudo o que acontece na cidade.',
     url: 'https://roxou.com.br',
     ctaText: 'Conhecer a Roxou',
-    badge: 'Disponível',
+    badge: 'Ecossistema Roxou',
     isAvailable: true,
     themeColor: {
       primary: '#9333ea',
@@ -27,11 +27,11 @@ export const PRODUCTS_DATA: Product[] = [
   {
     id: 'roxou-partner-pro',
     name: 'Roxou Partner Pro',
-    category: 'Tecnologia para negócios',
+    category: 'Ecossistema Roxou — Gestão',
     description: 'Um ecossistema de ferramentas para estabelecimentos, produtores e profissionais do entretenimento, reunindo gestão de listas VIP, reservas, convites e validação digital.',
     url: 'https://parceiro.roxou.com.br',
-    ctaText: 'Conhecer o Partner Pro',
-    badge: 'Disponível',
+    ctaText: 'Acessar o Partner Pro',
+    badge: 'Ecossistema Roxou',
     isAvailable: true,
     themeColor: {
       primary: '#7e22ce',
@@ -48,12 +48,14 @@ export const PRODUCTS_DATA: Product[] = [
     ]
   },
   {
-    id: 'roxou-motorista',
-    name: 'Roxou Motorista',
-    category: 'Mobilidade',
+    id: 'roxou-transporte',
+    name: 'Roxou Transporte',
+    category: 'Ecossistema Roxou — Mobilidade',
     description: 'Plataforma de gestão financeira e operacional desenvolvida para motoristas de aplicativo acompanharem corridas, faturamento, custos, metas e rentabilidade.',
-    badge: 'Em Desenvolvimento',
-    isAvailable: false,
+    url: 'https://transporte.roxou.com.br',
+    ctaText: 'Conhecer o Roxou Transporte',
+    badge: 'Ecossistema Roxou',
+    isAvailable: true,
     themeColor: {
       primary: '#f59e0b',
       secondary: '#3b82f6',
@@ -74,7 +76,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'Inteligência empresarial',
     description: 'Ferramenta de diagnóstico e inteligência financeira criada para auxiliar empresas a compreenderem sua capacidade financeira e se prepararem para os impactos do Split Payment e da nova realidade tributária.',
     url: 'https://contabil.ntaplicacoes.com.br',
-    ctaText: 'Conhecer o Split Ready AI',
+    ctaText: 'Acessar o Split Ready AI',
     badge: 'Disponível',
     isAvailable: true,
     disclaimer: 'Nota: O Split Ready AI é uma ferramenta proprietária de diagnóstico empresarial e não representa órgão oficial governamental ou consultoria tributária formal.',
@@ -93,33 +95,14 @@ export const PRODUCTS_DATA: Product[] = [
     ]
   },
   {
-    id: 'melhora-prudente',
-    name: 'Melhora Prudente',
-    category: 'Informação e cidades',
-    description: 'Plataforma digital de informação regional criada para aproximar notícias, cidade e população.',
-    badge: 'Projeto Regional',
-    isAvailable: false,
-    themeColor: {
-      primary: '#0284c7',
-      secondary: '#22d3ee',
-      border: 'border-sky-500/30',
-      bgGlow: 'from-sky-900/20 to-cyan-900/10',
-      gradient: 'from-sky-500 to-cyan-400'
-    },
-    features: [
-      'Centralizador de notícias e comunicados regionais',
-      'Canal de participação e utilidade pública para moradores',
-      'Monitoramento de serviços urbanos e bairros',
-      'Interface otimizada para leitura ágil em celulares'
-    ]
-  },
-  {
     id: 'prudente-em-foco',
     name: 'Prudente em Foco',
     category: 'Experiências e produção',
     description: 'Projeto dedicado à memória dos grandes acontecimentos da região e à criação e produção de novas experiências, eventos, shows e festivais.',
-    badge: 'Iniciativa Cultural',
-    isAvailable: false,
+    url: 'https://prudenteemfoco.com.br/',
+    ctaText: 'Conhecer o Prudente em Foco',
+    badge: 'Disponível',
+    isAvailable: true,
     themeColor: {
       primary: '#eab308',
       secondary: '#a855f7',
@@ -132,6 +115,29 @@ export const PRODUCTS_DATA: Product[] = [
       'Planejamento e produção executiva de grandes shows e festivais',
       'Cobertura fotográfica e multimídia de alto nível',
       'Engajamento comunitário e valorização da cultura local'
+    ]
+  },
+  {
+    id: 'melhora-prudente',
+    name: 'Melhora Prudente',
+    category: 'Informação e cidades',
+    description: 'Plataforma digital de informação regional criada para aproximar notícias, cidade e população.',
+    url: 'https://www.melhoraprudente.com.br',
+    ctaText: 'Conhecer o Melhora Prudente',
+    badge: 'Disponível',
+    isAvailable: true,
+    themeColor: {
+      primary: '#0284c7',
+      secondary: '#22d3ee',
+      border: 'border-sky-500/30',
+      bgGlow: 'from-sky-900/20 to-cyan-900/10',
+      gradient: 'from-sky-500 to-cyan-400'
+    },
+    features: [
+      'Centralizador de notícias e comunicados regionais',
+      'Canal de participação e utilidade pública para moradores',
+      'Monitoramento de serviços urbanos e bairros',
+      'Interface otimizada para leitura ágil em celulares'
     ]
   }
 ];

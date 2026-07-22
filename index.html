@@ -3,36 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Title & Meta Tags -->
     <title>NT Aplicações | Tecnologia e Produtos Digitais</title>
-    <meta name="description" content="A NT Aplicações cria plataformas, sistemas SaaS e produtos digitais para negócios, entretenimento, mobilidade, cidades e gestão." />
-    <meta name="keywords" content="NT Aplicações, produtos digitais, SaaS, tecnologia, software, inteligência empresarial, Roxou, Split Ready AI, mobilidade, gestão" />
+    <meta name="description" content="A NT Aplicações desenvolve e opera produtos digitais, plataformas web e soluções de tecnologia para negócios, mobilidade, entretenimento e informação." />
+    <meta name="keywords" content="NT Aplicações, produtos digitais, plataformas web, sistemas SaaS, tecnologia para negócios, inteligência aplicada, mobilidade, entretenimento, informação regional, Roxou, Split Ready AI" />
     <meta name="author" content="NT Aplicações" />
-    <meta name="theme-color" content="#0a0d14" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#07090e" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.ntaplicacoes.com.br/" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ntaplicacoes.com.br" />
-    <meta property="og:title" content="NT Aplicações | Tecnologia e Produtos Digitais" />
-    <meta property="og:description" content="Transformamos ideias em produtos digitais. Plataformas, sistemas SaaS e soluções inteligentes para negócios, cidades, entretenimento, mobilidade e gestão." />
     <meta property="og:site_name" content="NT Aplicações" />
-    <meta property="og:image" content="https://ntaplicacoes.com.br/og-image.jpg" />
+    <meta property="og:title" content="NT Aplicações | Tecnologia e Produtos Digitais" />
+    <meta property="og:description" content="A NT Aplicações desenvolve e opera produtos digitais, plataformas web e soluções de tecnologia para negócios, mobilidade, entretenimento e informação." />
+    <meta property="og:url" content="https://www.ntaplicacoes.com.br/" />
+    <meta property="og:image" content="https://www.ntaplicacoes.com.br/og-image.png" />
+    <meta property="og:locale" content="pt_BR" />
 
-    <!-- Twitter -->
+    <!-- Twitter / Social Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="NT Aplicações | Tecnologia e Produtos Digitais" />
-    <meta name="twitter:description" content="Transformamos ideias em produtos digitais. Plataformas, sistemas SaaS e soluções inteligentes." />
+    <meta name="twitter:description" content="A NT Aplicações desenvolve e opera produtos digitais, plataformas web e soluções de tecnologia para negócios, mobilidade, entretenimento e informação." />
+    <meta name="twitter:image" content="https://www.ntaplicacoes.com.br/og-image.png" />
 
-    <!-- Favicon Data SVG -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230a0d14'/><path d='M25 70V30L52 70V30M75 30V70' stroke='%233b82f6' stroke-width='9' stroke-linecap='round' stroke-linejoin='round' fill='none'/><circle cx='75' cy='30' r='5' fill='%23a855f7'/></svg>" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Structured Data / Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.ntaplicacoes.com.br/#organization",
+          "name": "NT Aplicações",
+          "url": "https://www.ntaplicacoes.com.br/",
+          "logo": "https://www.ntaplicacoes.com.br/og-image.png",
+          "description": "Empresa brasileira de tecnologia que desenvolve e opera produtos digitais próprios nas áreas de negócios, mobilidade, entretenimento, informação e inteligência.",
+          "knowsAbout": [
+            "Desenvolvimento de produtos digitais",
+            "Plataformas web",
+            "Sistemas SaaS",
+            "Tecnologia para negócios",
+            "Inteligência aplicada",
+            "Mobilidade urbana",
+            "Entretenimento e descoberta local",
+            "Informação regional"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.ntaplicacoes.com.br/#website",
+          "url": "https://www.ntaplicacoes.com.br/",
+          "name": "NT Aplicações",
+          "description": "A NT Aplicações desenvolve e opera produtos digitais, plataformas web e soluções de tecnologia para negócios, mobilidade, entretenimento e informação.",
+          "publisher": {
+            "@id": "https://www.ntaplicacoes.com.br/#organization"
+          },
+          "inLanguage": "pt-BR"
+        }
+      ]
+    }
+    </script>
   </head>
-  <body class="bg-[#080b11] text-slate-100 antialiased selection:bg-blue-600/30 selection:text-blue-200 overflow-x-hidden font-sans">
+  <body class="bg-[#07090e] text-slate-100 antialiased selection:bg-purple-600/30 selection:text-purple-200 overflow-x-hidden font-sans">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
