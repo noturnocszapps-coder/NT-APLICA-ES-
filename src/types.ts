@@ -16,6 +16,7 @@ export interface Product {
   ctaText?: string;
   badge?: string;
   isAvailable: boolean;
+  screenshotUrl?: string;
   themeColor: {
     primary: string;
     secondary: string;

@@ -20,15 +20,15 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#080b11] text-slate-100 flex flex-col font-sans selection:bg-blue-600/30 selection:text-blue-200">
+    <div className="min-h-screen bg-[#07090e] text-zinc-100 flex flex-col font-sans selection:bg-purple-500/20 selection:text-purple-200">
       {/* Header */}
       <Header onNavigate={handleNavigate} />
 
       {/* Main Content Sections */}
       <main className="flex-grow">
         <Hero onNavigate={handleNavigate} />
-        <About />
         <Ecosystem />
+        <About />
         <Areas />
         <Philosophy />
         <Contact />

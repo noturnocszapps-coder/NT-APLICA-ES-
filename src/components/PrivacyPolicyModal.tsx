@@ -1,6 +1,6 @@
 import React from 'react';
 import { COMPANY_CONFIG } from '../data/company';
-import { X, Shield, Lock, FileText, CheckCircle2 } from 'lucide-react';
+import { X, Shield } from 'lucide-react';
 
 interface PrivacyPolicyModalProps {
   isOpen: boolean;
@@ -11,71 +11,65 @@ export const PrivacyPolicyModal: React.FC<PrivacyPolicyModalProps> = ({ isOpen, 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in overflow-y-auto">
       <div 
-        className="relative w-full max-w-2xl bg-[#0c101c] border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden my-8"
+        className="relative w-full max-w-xl bg-[#0c0f17] border border-zinc-800 rounded-xl shadow-2xl overflow-hidden my-8"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-900/60">
-          <div className="flex items-center gap-2.5">
-            <Shield className="w-5 h-5 text-blue-400" />
-            <h3 className="text-xl font-bold font-heading text-white">Política de Privacidade</h3>
+        <div className="p-5 border-b border-zinc-800/80 flex items-center justify-between bg-[#0a0c12]">
+          <div className="flex items-center gap-2">
+            <Shield className="w-4 h-4 text-zinc-400" />
+            <h3 className="text-base font-bold font-heading text-white">Política de Privacidade</h3>
           </div>
           <button 
             onClick={onClose}
-            className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors cursor-pointer"
+            className="p-1 rounded-lg text-zinc-400 hover:text-white transition-colors cursor-pointer"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Policy Content */}
-        <div className="p-6 sm:p-8 space-y-5 text-sm text-slate-300 leading-relaxed max-h-[60vh] overflow-y-auto font-sans">
-          <p className="text-xs text-slate-400 font-mono">
+        <div className="p-6 space-y-4 text-xs text-zinc-300 leading-relaxed max-h-[60vh] overflow-y-auto font-sans">
+          <p className="text-[10px] text-zinc-400 font-mono uppercase">
             Última atualização: {new Date().toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' })}
           </p>
 
-          <section className="space-y-2">
-            <h4 className="text-base font-bold text-white flex items-center gap-2">
-              <Lock className="w-4 h-4 text-blue-400" /> 1. Compromisso NT Aplicações
-            </h4>
+          <section className="space-y-1.5">
+            <h4 className="text-sm font-bold text-white">1. Compromisso NT Aplicações</h4>
             <p>
-              A <strong className="text-white">NT Aplicações</strong> valoriza a transparência, privacidade e proteção dos dados de todos os usuários que navegam em nosso site e interagem com nossas soluções digitais.
+              A <strong className="text-white">NT Aplicações</strong> valoriza a transparência e a proteção dos dados de todos os usuários que navegam em nosso site e utilizam nossas soluções digitais.
             </p>
           </section>
 
-          <section className="space-y-2">
-            <h4 className="text-base font-bold text-white flex items-center gap-2">
-              <FileText className="w-4 h-4 text-indigo-400" /> 2. Coleta e Uso de Dados
-            </h4>
+          <section className="space-y-1.5">
+            <h4 className="text-sm font-bold text-white">2. Coleta e Uso de Dados</h4>
             <p>
-              As informações fornecidas em nossos formulários institucionais (como nome, empresa, e-mail e WhatsApp) são utilizadas exclusivamente para responder a solicitações de contato, apresentar propostas de negócios e fornecer suporte às nossas plataformas.
+              As informações fornecidas nos formulários (como nome, e-mail ou WhatsApp) são utilizadas exclusivamente para responder a solicitações de contato e apresentar nossas soluções.
             </p>
           </section>
 
-          <section className="space-y-2">
-            <h4 className="text-base font-bold text-white flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" /> 3. Conformidade com a LGPD
-            </h4>
+          <section className="space-y-1.5">
+            <h4 className="text-sm font-bold text-white">3. Conformidade com a LGPD</h4>
             <p>
-              Tratamos dados pessoais em estrita conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Não vendemos, alugamos ou compartilhamos dados pessoais com terceiros para fins publicitários não autorizados.
+              Tratamos dados em estrita conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Não comercializamos dados com terceiros.
             </p>
           </section>
 
-          <section className="space-y-2">
-            <h4 className="text-base font-bold text-white">4. Contato do Encarregado</h4>
+          <section className="space-y-1.5">
+            <h4 className="text-sm font-bold text-white">4. Contato</h4>
             <p>
-              Para dúvidas relacionadas à privacidade e proteção de dados, entre em contato através do e-mail: <span className="text-blue-300 font-mono">{COMPANY_CONFIG.contactEmail}</span>.
+              Para dúvidas relacionadas à privacidade, entre em contato pelo e-mail: <span className="text-zinc-200 font-mono">{COMPANY_CONFIG.contactEmail}</span>.
             </p>
           </section>
         </div>
 
         {/* Footer */}
-        <div className="p-4 border-t border-slate-800 bg-slate-900/80 flex items-center justify-end">
+        <div className="p-4 border-t border-zinc-800/80 bg-[#0a0c12] flex items-center justify-end">
           <button
             onClick={onClose}
-            className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition-colors cursor-pointer"
+            className="px-4 py-2 rounded-lg bg-zinc-100 text-zinc-950 font-semibold text-xs uppercase tracking-wider transition-colors cursor-pointer"
           >
             Compreendido
           </button>

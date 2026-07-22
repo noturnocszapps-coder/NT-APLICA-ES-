@@ -1,101 +1,78 @@
 import React from 'react';
-import { AREAS_DATA } from '../data/areas';
-import { 
-  Cloud, 
-  Sparkles, 
-  Globe, 
-  LayoutGrid, 
-  Compass, 
-  Building2, 
-  ArrowUpRight,
-  Cpu
-} from 'lucide-react';
+
+interface AreaItem {
+  number: string;
+  title: string;
+  description: string;
+}
 
 export const Areas: React.FC = () => {
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Cloud':
-        return <Cloud className="w-6 h-6 text-blue-400" />;
-      case 'Sparkles':
-        return <Sparkles className="w-6 h-6 text-purple-400" />;
-      case 'Globe':
-        return <Globe className="w-6 h-6 text-cyan-400" />;
-      case 'LayoutGrid':
-        return <LayoutGrid className="w-6 h-6 text-indigo-400" />;
-      case 'Compass':
-        return <Compass className="w-6 h-6 text-pink-400" />;
-      case 'Building2':
-        return <Building2 className="w-6 h-6 text-emerald-400" />;
-      default:
-        return <Cpu className="w-6 h-6 text-blue-400" />;
+  const areasList: AreaItem[] = [
+    {
+      number: '01',
+      title: 'Entretenimento e descoberta',
+      description: 'Plataformas para localização de eventos, curadoria local e engajamento cultural.'
+    },
+    {
+      number: '02',
+      title: 'Tecnologia para negócios',
+      description: 'Soluções de gestão operacional, controle de acesso VIP, reservas e CRM.'
+    },
+    {
+      number: '03',
+      title: 'Mobilidade',
+      description: 'Ferramentas de controle de custos, rentabilidade e metas para motoristas de aplicativos.'
+    },
+    {
+      number: '04',
+      title: 'Inteligência empresarial',
+      description: 'Engines de diagnóstico financeiro e simulação de impactos de Split Payment e reforma tributária.'
+    },
+    {
+      number: '05',
+      title: 'Informação e cidades',
+      description: 'Centralizadores de informação regional e serviços para aproximar população e município.'
+    },
+    {
+      number: '06',
+      title: 'Experiências',
+      description: 'Produção executiva, resgate histórico e acervos digitais de marcos regionais.'
     }
-  };
+  ];
 
   return (
-    <section id="areas" className="py-24 relative bg-[#090d16] border-y border-slate-800/60 overflow-hidden">
-      
-      {/* Background Accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="areas" className="py-24 sm:py-32 relative bg-[#07090e] border-t border-zinc-800/80">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-mono text-indigo-300 mb-4">
-            <Cpu className="w-3.5 h-3.5" />
-            <span>Especialidades & Engenharia</span>
+        <div className="text-left max-w-2xl mb-12 sm:mb-16">
+          <div className="text-xs font-mono tracking-widest text-zinc-400 uppercase mb-3">
+            ÁREAS DE ATUAÇÃO
           </div>
-
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white tracking-tight mb-6">
-            Áreas de <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">Atuação</span>
+          <h2 className="text-3xl sm:text-4xl font-bold font-heading text-white tracking-tight">
+            Segmentos onde aplicamos nossas plataformas.
           </h2>
-
-          <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Nossa expertise abrange o ciclo completo de concepção, engenharia e escala de produtos digitais robustos.
-          </p>
         </div>
 
-        {/* Areas Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {AREAS_DATA.map((area) => (
+        {/* Minimalist Editorial List */}
+        <div className="divide-y divide-zinc-800/80 border-y border-zinc-800/80">
+          {areasList.map((item) => (
             <div 
-              key={area.id}
-              className="glass-panel rounded-2xl p-6 glass-panel-hover flex flex-col justify-between group border border-slate-800"
+              key={item.number}
+              className="py-6 sm:py-8 group hover:bg-zinc-900/30 transition-colors px-2 sm:px-4 rounded-lg flex flex-col md:flex-row md:items-center justify-between gap-4"
             >
-              <div>
-                {/* Icon & Metric */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 group-hover:border-blue-500/40 transition-colors">
-                    {getIcon(area.iconName)}
-                  </div>
-                  <span className="text-[11px] font-mono text-slate-400 bg-slate-900/80 px-2.5 py-1 rounded-md border border-slate-800">
-                    {area.metrics}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold font-heading text-white mb-2.5 group-hover:text-blue-300 transition-colors">
-                  {area.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                  {area.description}
-                </p>
+              <div className="flex items-baseline gap-4 sm:gap-6">
+                <span className="text-sm font-mono text-zinc-400 shrink-0">
+                  {item.number}
+                </span>
+                <span className="text-xl sm:text-2xl font-bold font-heading text-white group-hover:text-purple-300 transition-colors">
+                  {item.title}
+                </span>
               </div>
 
-              {/* Tags */}
-              <div className="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5">
-                {area.tags.map((tag, idx) => (
-                  <span 
-                    key={idx}
-                    className="text-[10px] font-mono text-slate-300 bg-slate-900 px-2 py-0.5 rounded border border-slate-800"
-                  >
-                    #{tag}
-                  </span>
-                ))}
+              <div className="text-xs sm:text-sm text-zinc-400 md:max-w-md md:text-right font-normal">
+                {item.description}
               </div>
-
             </div>
           ))}
         </div>
