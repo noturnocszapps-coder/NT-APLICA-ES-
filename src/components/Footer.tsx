@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMPANY_CONFIG } from '../data/company';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -23,7 +24,30 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onNavigateRoute, onO
             <p className="text-xs text-zinc-400 max-w-sm leading-relaxed">
               Criamos e operamos produtos digitais próprios para demandas do mundo real.
             </p>
+            <div className="pt-2 text-xs space-y-1 text-zinc-400">
+              <p>
+                E-mail:{' '}
+                <a
+                  href={`mailto:${COMPANY_CONFIG.contactEmail}`}
+                  className="text-zinc-300 hover:text-white transition-colors underline decoration-zinc-700"
+                >
+                  {COMPANY_CONFIG.contactEmail}
+                </a>
+              </p>
+              <p>
+                WhatsApp:{' '}
+                <a
+                  href={COMPANY_CONFIG.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300 transition-colors underline decoration-emerald-900"
+                >
+                  {COMPANY_CONFIG.whatsappDisplay}
+                </a>
+              </p>
+            </div>
           </div>
+
 
           {/* Product Links */}
           <div className="md:col-span-4 space-y-2.5">
