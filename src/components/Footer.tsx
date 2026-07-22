@@ -2,10 +2,11 @@ import React from 'react';
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
+  onNavigateRoute?: (route: string) => void;
   onOpenPrivacy: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onNavigateRoute, onOpenPrivacy }) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -99,6 +100,20 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenPrivacy }) => 
               Institucional
             </div>
             <ul className="space-y-1.5 text-xs">
+              <li>
+                <a
+                  href="/desenvolvimento-com-inteligencia-artificial"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (onNavigateRoute) {
+                      onNavigateRoute('/desenvolvimento-com-inteligencia-artificial');
+                    }
+                  }}
+                  className="hover:text-purple-300 transition-colors text-zinc-300 cursor-pointer font-medium"
+                >
+                  Desenvolvimento com IA
+                </a>
+              </li>
               <li>
                 <button 
                   onClick={() => onNavigate('about')} 

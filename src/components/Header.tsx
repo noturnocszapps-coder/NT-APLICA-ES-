@@ -3,9 +3,11 @@ import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface HeaderProps {
   onNavigate: (sectionId: string) => void;
+  onNavigateRoute?: (route: string) => void;
+  currentPath?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
+export const Header: React.FC<HeaderProps> = ({ onNavigate, onNavigateRoute, currentPath = '/' }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -27,6 +29,13 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
     onNavigate(id);
   };
 
+  const handleRouteClick = (route: string) => {
+    setMobileMenuOpen(false);
+    if (onNavigateRoute) {
+      onNavigateRoute(route);
+    }
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -40,9 +49,16 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
           
           {/* Logo */}
           <a 
-            href="#hero" 
-            onClick={(e) => { e.preventDefault(); handleNavClick('hero'); }}
-            className="flex items-center gap-2.5 group focus:outline-none"
+            href="/" 
+            onClick={(e) => { 
+              e.preventDefault(); 
+              if (currentPath === '/') {
+                handleNavClick('hero'); 
+              } else {
+                handleRouteClick('/');
+              }
+            }}
+            className="flex items-center gap-2.5 group focus:outline-none cursor-pointer"
           >
             <div className="w-2.5 h-2.5 rounded-full bg-purple-500 transition-transform group-hover:scale-125" />
             <span className="font-heading font-bold text-base sm:text-lg text-white tracking-tight">
@@ -57,6 +73,14 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
               className="text-xs font-medium uppercase tracking-wider text-zinc-300 hover:text-white transition-colors cursor-pointer"
             >
               Produtos
+            </button>
+            <button 
+              onClick={() => handleRouteClick('/desenvolvimento-com-inteligencia-artificial')}
+              className={`text-xs font-medium uppercase tracking-wider transition-colors cursor-pointer ${
+                currentPath === '/desenvolvimento-com-inteligencia-artificial' ? 'text-purple-400 font-bold' : 'text-zinc-300 hover:text-white'
+              }`}
+            >
+              Desenvolvimento com IA
             </button>
             <button 
               onClick={() => handleNavClick('about')}
@@ -102,6 +126,13 @@ export const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
               className="text-left py-2 px-3 text-sm font-medium text-zinc-200 hover:text-white hover:bg-zinc-900 rounded-md"
             >
               Produtos
+            </button>
+            <button 
+              onClick={() => handleRouteClick('/desenvolvimento-com-inteligencia-artificial')}
+              className="text-left py-2 px-3 text-sm font-medium text-purple-300 hover:text-white hover:bg-zinc-900 rounded-md flex items-center justify-between"
+            >
+              <span>Desenvolvimento com IA</span>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800/40">SEO</span>
             </button>
             <button 
               onClick={() => handleNavClick('about')}

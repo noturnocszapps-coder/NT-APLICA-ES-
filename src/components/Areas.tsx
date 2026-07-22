@@ -1,12 +1,18 @@
 import React from 'react';
+import { ArrowUpRight } from 'lucide-react';
 
 interface AreaItem {
   number: string;
   title: string;
   description: string;
+  hasAiLink?: boolean;
 }
 
-export const Areas: React.FC = () => {
+interface AreasProps {
+  onNavigateRoute?: (route: string) => void;
+}
+
+export const Areas: React.FC<AreasProps> = ({ onNavigateRoute }) => {
   const areasList: AreaItem[] = [
     {
       number: '01',
@@ -26,7 +32,8 @@ export const Areas: React.FC = () => {
     {
       number: '04',
       title: 'Inteligência empresarial',
-      description: 'Engines de diagnóstico financeiro e simulação de impactos de Split Payment e reforma tributária.'
+      description: 'Engines de diagnóstico financeiro e simulação de impactos de Split Payment e reforma tributária.',
+      hasAiLink: true
     },
     {
       number: '05',
@@ -70,8 +77,25 @@ export const Areas: React.FC = () => {
                 </span>
               </div>
 
-              <div className="text-xs sm:text-sm text-zinc-400 md:max-w-md md:text-right font-normal">
-                {item.description}
+              <div className="text-xs sm:text-sm text-zinc-400 md:max-w-md md:text-right font-normal space-y-2">
+                <p>{item.description}</p>
+                {item.hasAiLink && (
+                  <div className="pt-1">
+                    <a
+                      href="/desenvolvimento-com-inteligencia-artificial"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        if (onNavigateRoute) {
+                          onNavigateRoute('/desenvolvimento-com-inteligencia-artificial');
+                        }
+                      }}
+                      className="text-xs font-mono text-purple-400 hover:text-purple-300 transition-colors inline-flex items-center gap-1 cursor-pointer"
+                    >
+                      <span>Desenvolvimento com Inteligência Artificial</span>
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}
